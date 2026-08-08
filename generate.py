@@ -1,12 +1,20 @@
 def main():
-    # Masukkan URL Cloudflare Worker milikmu di sini
-    proxy_url = "https://qazaqstan-playlist.sulthan-pamenan.workers.dev/"  # <-- GANTI DENGAN LINK WORKER KAMU
+    # Masukkan URL Worker Cloudflare milikmu di sini
+    worker_url = "https://qazaqstan-playlist.sulthanpamenan.workers.dev" # <-- SESUAIKAN DENGAN URL WORKER KAMU
 
-    m3u_lines = [
-        "#EXTM3U",
-        '#EXTINF:-1 group-title="Sports" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlr6LL8cZkMCiUYvyIXMyXT5VRfKVagiR3gS8oiNLg4A&s", Qazaqstan TV',
-        proxy_url
+    channels = [
+        {"name": "Qazaqstan TV (National)", "logo": "https://qazaqstan.tv/favicon.ico", "id": "qazaqstan"},
+        {"name": "Qazaqstan TV (International)", "logo": "https://qazaqstan.tv/favicon.ico", "id": "qazaqstan_int"},
+        {"name": "QazSport TV", "logo": "https://qazsport.tv/favicon.ico", "id": "qazsport"},
+        {"name": "Balapan TV", "logo": "https://balapan.tv/favicon.ico", "id": "balapan"},
+        {"name": "El Arna TV", "logo": "https://elarna.tv/favicon.ico", "id": "elarna"}
     ]
+
+    m3u_lines = ["#EXTM3U"]
+
+    for ch in channels:
+        m3u_lines.append(f'#EXTINF:-1 group-title="Kazakhstan" tvg-logo="{ch["logo"]}", {ch["name"]}')
+        m3u_lines.append(f'{worker_url}/?ch={ch["id"]}')
 
     m3u_content = "\r\n".join(m3u_lines)
 
@@ -16,7 +24,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_content)
 
-    print("[SUCCESS] Playlist Qazaqstan via Cloudflare Proxy berhasil dibuat!")
+    print("[SUCCESS] Playlist All Kazakhstan Channels berhasil dibuat!")
 
 if __name__ == "__main__":
     main()
