@@ -1,6 +1,6 @@
 def main():
     # Masukkan URL Worker Cloudflare milikmu di sini
-    worker_url = "https://qazaqstan-playlist.sulthanpamenan.workers.dev" # <-- SESUAIKAN DENGAN URL WORKER KAMU
+    worker_url = "https://qazaqstan-playlist.sulthan-pamenan.workers.dev" # <-- SESUAIKAN DENGAN URL WORKER KAMU
 
     channels = [
         {"name": "Qazaqstan TV (National)", "logo": "https://qazaqstan.tv/favicon.ico", "id": "qazaqstan"},
