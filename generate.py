@@ -1,13 +1,11 @@
 def main():
-    # Masukkan URL Worker Cloudflare milikmu di sini
-    worker_url = "https://qazaqstan-playlist.sulthan-pamenan.workers.dev" # <-- SESUAIKAN DENGAN URL WORKER KAMU
+    worker_url = "https://qazaqstan-playlist.sulthan-pamenan.workers.dev"
 
+    # Menggunakan channel & feed yang tidak dibatas geoblock oleh qazcdn
     channels = [
-        {"name": "Qazaqstan TV (National)", "logo": "https://qazaqstan.tv/favicon.ico", "id": "qazaqstan"},
         {"name": "Qazaqstan TV (International)", "logo": "https://qazaqstan.tv/favicon.ico", "id": "qazaqstan_int"},
-        {"name": "QazSport TV", "logo": "https://qazsport.tv/favicon.ico", "id": "qazsport"},
-        {"name": "Balapan TV", "logo": "https://balapan.tv/favicon.ico", "id": "balapan"},
-        {"name": "El Arna TV", "logo": "https://elarna.tv/favicon.ico", "id": "elarna"}
+        {"name": "Jibek Joly TV (Global)", "logo": "https://jjtv.kz/favicon.ico", "id": "jibek_joly"},
+        {"name": "Silk Way Cinema", "logo": "https://jjtv.kz/favicon.ico", "id": "silk_way"}
     ]
 
     m3u_lines = ["#EXTM3U"]
@@ -24,7 +22,7 @@ def main():
     with open("playlist.m3u", "w", encoding="utf-8") as f:
         f.write(m3u_content)
 
-    print("[SUCCESS] Playlist All Kazakhstan Channels berhasil dibuat!")
+    print("[SUCCESS] Playlist International Kazakhstan berhasil dibuat!")
 
 if __name__ == "__main__":
     main()
