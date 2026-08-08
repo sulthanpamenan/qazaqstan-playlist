@@ -1,6 +1,6 @@
 def main():
     # Masukkan URL Cloudflare Worker milikmu di sini
-    proxy_url = "https://qazaqstan-proxy.username.workers.dev"  # <-- GANTI DENGAN LINK WORKER KAMU
+    proxy_url = "https://qazaqstan-playlist.sulthan-pamenan.workers.dev/"  # <-- GANTI DENGAN LINK WORKER KAMU
 
     m3u_lines = [
         "#EXTM3U",
