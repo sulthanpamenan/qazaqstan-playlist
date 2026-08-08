@@ -1,11 +1,7 @@
 #EXTM3U
-#EXTINF:-1 group-title="Kazakhstan" tvg-logo="https://qazaqstan.tv/favicon.ico", Qazaqstan TV (National)
-https://qazaqstan-playlist.sulthan-pamenan.workers.dev/?ch=qazaqstan
 #EXTINF:-1 group-title="Kazakhstan" tvg-logo="https://qazaqstan.tv/favicon.ico", Qazaqstan TV (International)
 https://qazaqstan-playlist.sulthan-pamenan.workers.dev/?ch=qazaqstan_int
-#EXTINF:-1 group-title="Kazakhstan" tvg-logo="https://qazsport.tv/favicon.ico", QazSport TV
-https://qazaqstan-playlist.sulthan-pamenan.workers.dev/?ch=qazsport
-#EXTINF:-1 group-title="Kazakhstan" tvg-logo="https://balapan.tv/favicon.ico", Balapan TV
-https://qazaqstan-playlist.sulthan-pamenan.workers.dev/?ch=balapan
-#EXTINF:-1 group-title="Kazakhstan" tvg-logo="https://elarna.tv/favicon.ico", El Arna TV
-https://qazaqstan-playlist.sulthan-pamenan.workers.dev/?ch=elarna
+#EXTINF:-1 group-title="Kazakhstan" tvg-logo="https://jjtv.kz/favicon.ico", Jibek Joly TV (Global)
+https://qazaqstan-playlist.sulthan-pamenan.workers.dev/?ch=jibek_joly
+#EXTINF:-1 group-title="Kazakhstan" tvg-logo="https://jjtv.kz/favicon.ico", Silk Way Cinema
+https://qazaqstan-playlist.sulthan-pamenan.workers.dev/?ch=silk_way
